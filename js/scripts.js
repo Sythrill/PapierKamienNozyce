@@ -120,9 +120,18 @@ function endOfGame() {
     if (player.score == 10) {
          playerPointsElem.innerHTML = player.score; 
         alert('wygrał gracz');
+        reset();
     } else if (computer.score == 10) {
         computerPointsElem.innerHTML = computer.score;
         alert('wygrał komputer');
+        reset();
     }
+    
 };
 
+function reset(){
+    newGameBtn.innerHTML = 'Jeszcze raz';
+    newGameElem.style.display = 'block';
+    pickElem.style.display = 'none';
+    resultsElem.style.display = 'none';
+};
